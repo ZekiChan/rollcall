@@ -46,3 +46,39 @@ Page({
     })
   }
 })
+Page({
+  //功能：上传文件（word/excel/ppt/pdf等）到云存储
+
+  //第一步：选择文件
+  chooseFile(){
+    let that = this
+    wx.chooseMessageFile({
+      count: 1,
+      type: 'all',
+      success (res) {
+        const tempFilePaths = res.tempFiles
+        let tempFile = tempFilePaths[0]
+        that.uploadFile(tempFile.name,tempFile.path)
+      }
+    })
+  },
+  //第二步：通过uploadFile上传选中的文件
+  uploadFile(fileName,tempFile){
+    wx.cloud.uploadFile({
+      cloudPath:fileName,
+      filePath:tempFile,
+    })
+  .then(res=>{
+    console.log("上传成功啦",res);
+    wx.showToast({
+      title: '文件上传成功',
+      icon:"success",
+      duration:2000
+    })
+  })
+  .catch(err=>{
+    console.log("上传失败啦",err);
+  })
+  }
+})
+

@@ -21,3 +21,9 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+<!--上传点名表到云存储-->
+<button bindtap="chooseFile" type="primary" >上传表格</button>
+
+<!--下载点名表到本地-->
+<button bindtap="chooseFile" type="primary" >下载表格</button>
