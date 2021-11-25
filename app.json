@@ -1,24 +1,42 @@
 {
-  "pages": [
+  "pages":[
+    "pages/home/home",
+    "pages/about/about",
+    "pages/update/update",
     "pages/index/index",
-    "pages/denglu/index",
-    "pages/basics/dianmin/dianmin",
-    "pages/basics/dmlist/dmlist",
-    "pages/basics/home/home",
-    "pages/basics/shangchuan/shangchuan",
-    "pages/basics/mdlist/index",
-    "pages/about/about/about",
-    "pages/about/home/home"
+    "pages/logs/logs",
+    "pages/tiaozhuan/tiaozhuan",
+    "pages/dianmin/dianmin",
+    "pages/dmlist/dmlist",
+    "pages/mdlist/mdlist",
+    "pages/test/index"
   ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "点名签到",
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#427BEE",
+    "navigationBarTitleText": "点名小程序",
     "navigationStyle": "custom",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle":"white"
   },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#3388EE",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+       "iconPath": "images/home1.png",
+       "selectedIconPath": "images/home.png"
+    },
+    {"pagePath": "pages/about/about",
+      "text": "我的",
+      "iconPath": "images/me1.png",
+      "selectedIconPath": "images/me.png"
+    }
+    ]
+  },
+  "style": "v2",
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
-  "sitemapLocation": "sitemap91.json"
+  "sitemapLocation": "sitemap.json"
 }

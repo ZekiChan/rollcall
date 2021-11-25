@@ -2,8 +2,8 @@
 App({
   onLaunch: function () {
     wx.cloud.init({
-        env: "cloud1-9gx6gcja551a6663"
-      }),
+      env: "cloud1-9gx6gcja551a6663"
+    }),
       wx.getSystemInfo({
         success: e => {
           this.globalData.StatusBar = e.statusBarHeight;
