@@ -2,7 +2,7 @@
 App({
   onLaunch: function () {
     wx.cloud.init({
-      env: "cloud1-9gx6gcja551a6663"
+      env: "cloud1-1glvcgbcef0bd1b4"
     }),
       wx.getSystemInfo({
         success: e => {
@@ -81,6 +81,7 @@ App({
   },
   globalData: {
     userInfo: null,
+    ls: [],
     mealsList:[], 
   }
 })
